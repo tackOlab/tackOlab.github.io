@@ -20,8 +20,7 @@
 Y\cr
 U\cr
 V
-\end{bmatrix}
-=
+\end{bmatrix}=
 \begin{bmatrix}
 R\cr
 G\cr

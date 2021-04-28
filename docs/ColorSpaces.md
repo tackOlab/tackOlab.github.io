@@ -9,10 +9,6 @@
  });
 </script>
 
----
-layout: default
-Title: 表色系（色空間）
----
 # 表色系（色空間）
 ## RGB
 

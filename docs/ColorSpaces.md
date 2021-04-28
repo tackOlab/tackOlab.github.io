@@ -1,10 +1,18 @@
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+ tex2jax: {
+ inlineMath: [['$', '$'] ],
+ displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+ }
+ });
+</script>
+
 ---
 layout: default
 Title: 表色系（色空間）
 ---
-
-<script async src="https://cdn<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS_CHTML"></script>
-
 # 表色系（色空間）
 ## RGB
 

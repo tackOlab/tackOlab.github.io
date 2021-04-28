@@ -7,6 +7,7 @@ Title: 表色系（色空間）
 ## RGB
 
 ## YCbCr
+$Y = R + G + B$
 ## HSV
 ## CIE L*a*b*
 ----

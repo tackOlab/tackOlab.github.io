@@ -23,6 +23,11 @@ V
 \end{bmatrix}
 =
 \begin{bmatrix}
+k_R & 1-k_R-k_B & k_B \\
+\frac{-0.5k_R}{1-k_B} & \frac{-0.5(1-k_R-k_B}{1-k_B} & 0.5 \\
+0.5 & \frac{-0.5(1-k_R-k_B}{1-k_R} & \frac{-0.5k_B}{1-k_R} 
+\end{bmatrix}
+\begin{bmatrix}
 R\cr
 G\cr
 B

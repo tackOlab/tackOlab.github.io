@@ -1,30 +1,28 @@
-# 画像データの基本
-## 画素とビット深度
-ディジタル静止画像は，ピクセル（Pixel，画素）と呼ばれる点の集合である．動画像は，静止画像の連続と考える．動画像においては，静止画像をフレームと呼ぶことが多い．1秒間あたりのフレーム数をフレームレートともいい，fps(frame per second)などの単位が用いられることがある．
-
-それぞれの画素はその明るさ（輝度とも言う）を数値として持つ．これを画素値という．画素値は符号なしの整数であることが多いが，浮動小数点数で表されることも，符号付きの整数で表されることもある．
-1画素をメモリ上に保持するために必要な情報量（ビット数）をビット深度（Bit depth）と呼び，bit/pixel, bpp, pel)などと表す．
-
-画素値が大きいと，より明るい点として表示され，小さければ暗い点として表示される．値そのものがどのような明るさで表示されるかは，ビット深度に依存する．以下に，整数画素値の場合の明るさと画素値の対応例を示す．
-
-|bpp|符号|最も明るい点の値|最も暗い点の値|
-|---|---|---:|---:|
-|1|なし|1|0|
-|4|なし|15|0|
-|8|なし|255|0|
-|8|あり|127|-128|
-|10|なし|1023|0|
-|12|なし|4095|0|
-
-例として，幅4ピクセル，高さ3ピクセル，ビット深度 8bpp（符号なし）の画像データを以下に示す．
-
-|x座標/y座標|0|1|2|3|
-|---:|---:|---:|---:|---:|
-|0|108|107|95|129|
-|1|214|25|3|0|
-|2|56|57|55|56|
-
-## 色の表現
-カラー画像の場合，表色系として光の3原色としてしられるRGB(Red, Green, Blue)が用いられることが多い．これはディスプレイのように自ら発光するデバイスとの相性が良いためである．RGB表色系では，各画素は，R, G, Bそれぞれの色成分の明るさを画素値に持つ．カラー画像の場合，各色成分のビット深度の合計が，その画素のビット深度となる．例えば，各色成分のビット深度が符号なしの8 bppである場合，このカラー画像のビット深度は8x3=24 bppとなる．
-
-# PNMフォーマット
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title></title>
+</head>
+<body><h1 id='画像データの基本'>画像データの基本</h1>
+<h2 id='画素とビット深度'>画素とビット深度</h2>
+<p>ディジタル静止画像は，ピクセル（Pixel，画素）と呼ばれる点の集合である．動画像は，静止画像の連続と考える．動画像においては，静止画像をフレームと呼ぶことが多い．1秒間あたりのフレーム数をフレームレートともいい，fps(frame per second)などの単位が用いられることがある．</p>
+<p>それぞれの画素はその明るさ（輝度とも言う）を数値として持つ．これを画素値という．画素値は符号なしの整数であることが多いが，浮動小数点数で表されることも，符号付きの整数で表されることもある．
+1画素をメモリ上に保持するために必要な情報量（ビット数）をビット深度（Bit depth）と呼び，bit/pixel, bpp, pel)などと表す．</p>
+<p>画素値が大きいと，より明るい点として表示され，小さければ暗い点として表示される．値そのものがどのような明るさで表示されるかは，ビット深度に依存する．以下に，整数画素値の場合の明るさと画素値の対応例を示す．</p>
+<figure><table>
+<thead>
+<tr><th>bpp</th><th>符号</th><th style='text-align:right;' >最も明るい点の値</th><th style='text-align:right;' >最も暗い点の値</th></tr></thead>
+<tbody><tr><td>1</td><td>なし</td><td style='text-align:right;' >1</td><td style='text-align:right;' >0</td></tr><tr><td>4</td><td>なし</td><td style='text-align:right;' >15</td><td style='text-align:right;' >0</td></tr><tr><td>8</td><td>なし</td><td style='text-align:right;' >255</td><td style='text-align:right;' >0</td></tr><tr><td>8</td><td>あり</td><td style='text-align:right;' >127</td><td style='text-align:right;' >-128</td></tr><tr><td>10</td><td>なし</td><td style='text-align:right;' >1023</td><td style='text-align:right;' >0</td></tr><tr><td>12</td><td>なし</td><td style='text-align:right;' >4095</td><td style='text-align:right;' >0</td></tr></tbody>
+</table></figure>
+<p>例として，幅4ピクセル，高さ3ピクセル，ビット深度 8bpp（符号なし）の画像データを以下に示す．</p>
+<figure><table>
+<thead>
+<tr><th style='text-align:right;' >x座標/y座標</th><th style='text-align:right;' >0</th><th style='text-align:right;' >1</th><th style='text-align:right;' >2</th><th style='text-align:right;' >3</th></tr></thead>
+<tbody><tr><td style='text-align:right;' >0</td><td style='text-align:right;' >108</td><td style='text-align:right;' >107</td><td style='text-align:right;' >95</td><td style='text-align:right;' >129</td></tr><tr><td style='text-align:right;' >1</td><td style='text-align:right;' >214</td><td style='text-align:right;' >25</td><td style='text-align:right;' >3</td><td style='text-align:right;' >0</td></tr><tr><td style='text-align:right;' >2</td><td style='text-align:right;' >56</td><td style='text-align:right;' >57</td><td style='text-align:right;' >55</td><td style='text-align:right;' >56</td></tr></tbody>
+</table></figure>
+<h2 id='色の表現'>色の表現</h2>
+<p>カラー画像の場合，表色系として光の3原色としてしられるRGB(Red, Green, Blue)が用いられることが多い．これはディスプレイのように自ら発光するデバイスとの相性が良いためである．RGB表色系では，各画素は，R, G, Bそれぞれの色成分の明るさを画素値に持つ．カラー画像の場合，各色成分のビット深度の合計が，その画素のビット深度となる．例えば，各色成分のビット深度が符号なしの8 bppである場合，このカラー画像のビット深度は8x3=24 bppとなる．</p>
+<h1 id='pnmフォーマット'>PNMフォーマット</h1>
+</body>
+</html>

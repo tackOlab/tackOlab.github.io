@@ -1,6 +1,7 @@
 ---
 layout: default
-___
+Title: 表色系（色空間）
+---
 # 表色系（色空間）
 ## RGB
 ## YCbCr

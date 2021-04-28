@@ -144,21 +144,26 @@ P_r
 輝度($Y$)，色差($C_b$，$C_r$)による表色系．直交座標．RGB表色系からの変換式は
 YUVにおける変換式に$k_R=0.2627$，$k_B=0.0593$を代入することで得られる．
 
-# ロスレスY'Cb'Cr'
+## ロスレスY'Cb'Cr'
 JPEG 2000 Part 1のロスレス符号化時に用いられる表色系．整数精度でも可逆変換である．
 \begin{align}
-Y' &=\lfloor\frac{R+2G+B}{4}\rfloor \cr
+Y' &=\left\lfloor\frac{R+2G+B}{4}\right\rfloor \cr
 C_b' &= B - G \cr
 C_r' &= R - G 
 \end{align}
 
 \begin{align}
-G &= Y' - \lfloor\frac{C_b'+C_r'}{4}\rfloor \cr
+G &= Y' - \left\lfloor\frac{C_b'+C_r'}{4}\right\rfloor \cr
 B &= C_b' + G \cr
 R &= C_r' + G
 \end{align}
 
 ## HSV
+色相(Hue, $H$)，彩度(Saturation, $S$)，明度(Value, Brightness, $V$)による表色系．円柱または円錐座標．
+物体色による画像認識に用いられる．
+
 ## CIE Lab
+表色系における2点間の距離が，知覚される色の近さと比例するように設計された均等色空間．
+
 ----
 [チートシート目次へ戻る](./index.md)

@@ -140,7 +140,25 @@ P_r
 \end{bmatrix}
 \end{align}
 
+## YCbCr (ITU-R BT.2020方式)
+輝度($Y$)，色差($C_b$，$C_r$)による表色系．直交座標．RGB表色系からの変換式は
+YUVにおける変換式に$k_R=0.2627$，$k_B=0.0593$を代入することで得られる．
+
+# ロスレスY'Cb'Cr'
+JPEG 2000 Part 1のロスレス符号化時に用いられる表色系．整数精度でも可逆変換である．
+\begin{align}
+Y' &=\lfloor\frac{R+2G+B}{4}\rfloor \cr
+C_b' &= B - G \cr
+C_r' &= R - G 
+\end{align}
+
+\begin{align}
+G &= Y' - \lfloor\frac{C_b'+C_r'}{4}\rfloor \cr
+B &= C_b' + G \cr
+R &= C_r' + G
+\end{align}
+
 ## HSV
-## CIE $L^*a^*b^*$
+## CIE Lab
 ----
 [チートシート目次へ戻る](./index.md)

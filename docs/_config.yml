@@ -1,6 +1,7 @@
 theme: jekyll-theme-cayman
 lang: ja-JP
 title: OLab cheet-sheets
+description: 渡邊（修）研究室所属学生のための情報
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge

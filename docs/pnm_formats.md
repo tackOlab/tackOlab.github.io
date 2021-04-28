@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 表色系（色空間）
-___
+Title: PNMフォーマット
+---
 # PNM(Portable aNyMap)フォーマット
 ## PBM
 ## PGM

@@ -15,6 +15,7 @@
 
 ## YUV
 輝度($Y$)，色差($U$，$V$)による表色系．直交座標．RGB表色系からの変換は次式で表される．
+
 \begin{align}
 \begin{bmatrix}
 Y\cr
@@ -23,8 +24,8 @@ V
 \end{bmatrix}
 =
 \begin{bmatrix}
-k_R & 1-k_R-k_B & k_B \\
-\frac{-0.5k_R}{1-k_B} & \frac{-0.5(1-k_R-k_B}{1-k_B} & 0.5 \\
+k_R & 1-k_R-k_B & k_B \cr
+\frac{-0.5k_R}{1-k_B} & \frac{-0.5(1-k_R-k_B}{1-k_B} & 0.5 \cr
 0.5 & \frac{-0.5(1-k_R-k_B}{1-k_R} & \frac{-0.5k_B}{1-k_R} 
 \end{bmatrix}
 \begin{bmatrix}
@@ -33,6 +34,7 @@ G\cr
 B
 \end{bmatrix}
 \end{align}
+
 ## YCbCr
 輝度($Y$)，色差($C_b$，$C_r$)による表色系．直交座標．RGB表色系からの変換は次式で表される．
 

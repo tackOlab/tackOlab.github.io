@@ -15,18 +15,19 @@
 
 ## YUV
 輝度($Y$)，色差($U$，$V$)による表色系．直交座標．RGB表色系からの変換は次式で表される．
-
+\begin{align}
 \begin{bmatrix}
 Y\cr
 U\cr
 V
-\end{bmatrix}=
+\end{bmatrix}
+=
 \begin{bmatrix}
 R\cr
 G\cr
 B
 \end{bmatrix}
-
+\end{align}
 ## YCbCr
 輝度($Y$)，色差($C_b$，$C_r$)による表色系．直交座標．RGB表色系からの変換は次式で表される．
 

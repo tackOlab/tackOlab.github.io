@@ -15,6 +15,7 @@ Title: OLab cheetsheets
 ## CLI入門
 
 ## プログラミング
+### [2進数](./binary_values.md)
 
 ### C/C++
 

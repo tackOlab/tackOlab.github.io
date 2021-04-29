@@ -2,24 +2,26 @@
 layout: default
 Title: OLab cheetsheets
 ---
-# 研究に必要な基礎知識
 
-## ディジタル画像処理
+# ディジタル画像処理
 
-### [画像データの基本](./basic_of_imagedata.md)
+## [画像データの基本](./basic_of_imagedata.md)
 
-### [PNMフォーマット](./pnm_formats.md)
+## [PNMフォーマット](./pnm_formats.md)
 
-### [表色系（色空間)](./ColorSpaces.md)
+## [表色系（色空間)](./ColorSpaces.md)
 
-## CLI入門
+# CLI (Command Line Interface)
 
-## プログラミング
-### [2進数](./binary_values.md)
+## [ターミナルを使う](./terminal.md)
 
-### C/C++
+# プログラミング
 
-### MATLAB
+## [2進数](./binary_values.md)
 
-### HDL
+## C/C++
+
+## MATLAB
+
+## HDL
 

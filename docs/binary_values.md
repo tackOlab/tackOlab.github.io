@@ -1,10 +1,6 @@
 <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script>
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
----
-layout: default
-Title: 2進数
----
 # 10進数
 我々は日常的に10進数を用いて数値を表現・理解している．
 10進数では，各桁の重みが$10^n$であり，各桁に使用できる数字は$0$から$9$の10種類である．ある数は各桁の数字にその重みをかけることで表すことができる．

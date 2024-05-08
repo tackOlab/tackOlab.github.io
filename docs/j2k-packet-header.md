@@ -34,10 +34,31 @@ $Lblock$の初期値は$3$であり，$Lblock$の値は増加するのみで減�
 1. 最初の符号バイトに対応する符号化パス数は1なので，
    
 \begin{align}
-bits &= Lblock(=3) + \left\lfloor\log_2(1)\rfloor\right = 3
+bits &= Lblock + \left\lfloor\log_2(1)\rfloor\right = 3
 \end{align}
 
 6は3ビットで表現できるので，$Lblock$の増加はなし(0)．よって3ビットで6バイト(110)を表現する．$Lblock=3$．
-3. 2番目の符号バイトに対応する符号化パス数は9なので，$bits = Lblock(=3) + \left\lfloor\log_2(9)\rfloor\right = 6$．31は6ビットで表現できるので，$Lblock$の増加はなし(0)．よって6ビットで31バイト(011111)を表現する．$Lblock=3$．
-4. 3番目の符号バイトに対応する符号化パス数は2なので，$bits = Lblock(=3) + \left\lfloor\log_2(2)\rfloor\right = 4$．44は4ビットで表現できないので（6ビット必要），$Lblock$を$6-4=2$増加させる(110)．6ビットで44バイト(101100)を表現する．$Lblock=3+2=5$．
-5. 4番目の符号バイトに対応する符号化パス数は5なので，$bits = Lblock(=5) + \left\lfloor\log_2(5)\rfloor\right = 7$．134は7ビットで表現できないので（8ビット必要），$Lblock$を$8-7=1$増加させる(10)．8ビットで134バイト(10000110)を表現する．$Lblock=5+1=6$．
+
+1. 2番目の符号バイトに対応する符号化パス数は9なので，
+
+\begin{align}
+bits &= Lblock + \left\lfloor\log_2(9)\rfloor\right = 6
+\end{align}
+
+31は6ビットで表現できるので，$Lblock$の増加はなし(0)．よって6ビットで31バイト(011111)を表現する．$Lblock=3$．
+
+1. 3番目の符号バイトに対応する符号化パス数は2なので，
+
+\begin{align}
+bits &= Lblock + \left\lfloor\log_2(2)\rfloor\right = 4
+\end{align}
+
+44は4ビットで表現できないので（6ビット必要），$Lblock$を$6-4=2$増加させる(110)．6ビットで44バイト(101100)を表現する．$Lblock=3+2=5$．
+
+1. 4番目の符号バイトに対応する符号化パス数は5なので，
+
+\begin{align}
+bits &= Lblock(=5) + \left\lfloor\log_2(5)\rfloor\right = 7
+\end{align}
+
+134は7ビットで表現できないので（8ビット必要），$Lblock$を$8-7=1$増加させる(10)．8ビットで134バイト(10000110)を表現する．$Lblock=5+1=6$．

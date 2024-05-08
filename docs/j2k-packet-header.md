@@ -33,9 +33,9 @@ $Lblock$の初期値は$3$であり，$Lblock$の値は増加するのみで減�
 
 ##### 最初の符号バイトに対応する符号化パス数は1なので，
    
-\begin{align}
+```math
 bits &= Lblock + \left\lfloor\log_2(1)\rfloor\right = 3
-\end{align}
+```
 
 6は3ビットで表現できるので，$Lblock$の増加はなし(0)．よって3ビットで6バイト(110)を表現する．$Lblock=3$．
 
